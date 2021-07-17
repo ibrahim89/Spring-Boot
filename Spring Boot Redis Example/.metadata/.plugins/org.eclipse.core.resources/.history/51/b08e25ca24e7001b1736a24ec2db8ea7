@@ -1,0 +1,5 @@
+package com.myhome.redisdemo.controller;
+
+public class UserController {
+
+}

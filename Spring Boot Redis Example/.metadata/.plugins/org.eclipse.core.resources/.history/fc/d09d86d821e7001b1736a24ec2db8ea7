@@ -1,0 +1,20 @@
+package com.myhome.redisdemo.repository;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.myhome.redisdemo.model.User;
+
+@Repository
+public class UserRepoImpl implements UserRepo {
+
+	@Autowired
+	private RedisTemplate<String, Object> redisTemplate;
+	@Override
+	public boolean save(User user) {
+		
+		return false;
+	}
+
+}

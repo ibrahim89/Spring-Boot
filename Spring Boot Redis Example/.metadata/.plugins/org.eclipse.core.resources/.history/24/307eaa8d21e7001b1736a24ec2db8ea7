@@ -1,0 +1,8 @@
+package com.myhome.redisdemo.repository;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class UserRepoImpl implements UserRepo {
+
+}

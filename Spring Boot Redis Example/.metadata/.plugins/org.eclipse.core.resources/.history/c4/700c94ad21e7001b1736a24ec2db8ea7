@@ -1,0 +1,17 @@
+package com.myhome.redisdemo.repository;
+
+import org.springframework.stereotype.Repository;
+
+import com.myhome.redisdemo.model.User;
+
+@Repository
+public class UserRepoImpl implements UserRepo {
+
+	
+	@Override
+	public boolean save(User user) {
+		
+		return false;
+	}
+
+}

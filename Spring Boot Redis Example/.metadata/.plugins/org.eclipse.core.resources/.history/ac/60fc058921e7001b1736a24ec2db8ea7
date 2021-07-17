@@ -1,0 +1,5 @@
+package com.myhome.redisdemo.repository;
+
+public interface UserRepo {
+
+}

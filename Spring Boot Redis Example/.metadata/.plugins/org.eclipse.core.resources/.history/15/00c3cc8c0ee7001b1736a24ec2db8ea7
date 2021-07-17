@@ -1,0 +1,5 @@
+package com.myhome.redisdemo.config;
+
+public class RedisConfig {
+
+}

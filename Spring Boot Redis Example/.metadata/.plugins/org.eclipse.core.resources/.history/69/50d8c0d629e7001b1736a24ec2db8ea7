@@ -1,0 +1,8 @@
+package com.myhome.redisdemo.repository;
+
+import com.myhome.redisdemo.model.User;
+
+public interface UserRepo {
+
+	boolean  save(User user);
+}

@@ -1,0 +1,7 @@
+package com.myhome.redisdemo.service;
+
+import com.myhome.redisdemo.model.User;
+
+public interface UserService {
+		boolean SaveUser(User user);
+}

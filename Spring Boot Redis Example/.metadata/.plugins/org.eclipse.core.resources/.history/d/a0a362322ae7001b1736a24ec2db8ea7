@@ -1,0 +1,20 @@
+package com.myhome.redisdemo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.myhome.redisdemo.model.User;
+import com.myhome.redisdemo.repository.UserRepo;
+
+@Service
+public class UserServiceImpl implements UserService{
+
+	@Autowired
+	private UserRepo userRepo;
+	@Override
+	public boolean SaveUser(User user) {
+		
+		return userRepo.save(user);
+	}
+
+}

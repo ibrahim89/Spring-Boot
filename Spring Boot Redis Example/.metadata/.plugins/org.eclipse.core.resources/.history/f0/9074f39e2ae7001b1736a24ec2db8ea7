@@ -1,0 +1,11 @@
+package com.myhome.redisdemo.service;
+
+import java.util.List;
+
+import com.myhome.redisdemo.model.User;
+
+public interface UserService {
+		boolean SaveUser(User user);
+
+		List<User> getAllUsers();
+}

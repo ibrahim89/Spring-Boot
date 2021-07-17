@@ -1,0 +1,43 @@
+package com.myhome.redisdemo.repository;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.myhome.redisdemo.model.User;
+
+
+
+@Repository
+public class UserRepoImpl implements UserRepo {
+
+	@Autowired
+	private RedisTemplate redisTemplate;
+	
+	private static final  String KEY = "USER";
+	@Override
+	public boolean save(User user) {
+		try {
+			redisTemplate.opsForHash().put(KEY, user.getUserId().toString(), user);
+			return true;	
+		}catch(Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		
+	}
+	@Override
+	public List<User> findAllUsers() {
+		
+		return redisTemplate.opsForHash().values(KEY);
+	}
+	@Override
+	public boolean deleteUser(Long id) {
+		// TODO Auto-generated method stub
+		redisTemplate.opsForHash().delete(KEY, id.toString());
+		return false;
+	}
+
+}
